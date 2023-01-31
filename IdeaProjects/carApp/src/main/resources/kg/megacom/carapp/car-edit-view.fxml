@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="299.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.megacom.carapp.controllers.CarEditController">
+   <children>
+      <GridPane layoutX="21.0" layoutY="35.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="0.0" prefWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.0" minWidth="10.0" prefWidth="213.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="№" />
+            <Label text="Бренд" GridPane.rowIndex="1" />
+            <Label text="Модель" GridPane.rowIndex="2" />
+            <Label text="Пробег" GridPane.rowIndex="5" />
+            <Label text="Цена" GridPane.rowIndex="3" />
+            <Label text="Новая?" GridPane.rowIndex="4" />
+            <TextField fx:id="txtNum" editable="false" promptText="Auto" text="0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtBrand" promptText="Введите текст" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtModel" promptText="Введите текст" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Spinner fx:id="spnPrice" prefHeight="25.0" prefWidth="239.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox fx:id="checkIsNew" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Spinner fx:id="spnMileage" prefHeight="25.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="130.0" layoutY="231.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.rightAnchor="40.0">
+        <buttons>
+          <Button defaultButton="true" mnemonicParsing="false" onAction="#onSave" text="Сохранить" />
+            <Button cancelButton="true" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#onCancel" text="Отмена" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
